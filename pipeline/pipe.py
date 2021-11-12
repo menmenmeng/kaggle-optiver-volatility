@@ -173,7 +173,8 @@ def regenerate_data(stock_id_list):
         transformed = pd.merge(book_transformed, trade_transformed, how='outer', on='row_id')
         frame = pd.concat([frame, transformed], ignore_index = True)
 
-    frame.to_csv('frame.csv')
+    root_dir = 'C:/Users/frank/data_analysis/kaggle-optiver-volatility/data/'
+    frame.to_csv(root_dir+'frame.csv')
 
 
 if __name__ == '__main__':
